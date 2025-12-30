@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CalculadoraDeExtra": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
