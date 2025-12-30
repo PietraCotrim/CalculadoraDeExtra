@@ -1,4 +1,4 @@
-# CalculadoraDeSalario em Csharp 
+# CalculadoraDeExtra em Csharp 
 Este projeto é uma calculadora de hora extra desenvolvida em C#, executada no console, que realiza o cálculo de hora extra considerando também o DSR.
 #Funcionalidades A aplicação solicita informações ao usuário e realiza os seguintes cálculos: 
 
