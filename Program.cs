@@ -16,7 +16,8 @@ namespace Calculadora
             double porcertagem = double.Parse(ReadLine());
             double extra = valorHora * (1 + porcertagem / 100) * qtdHoras;
 
-            WriteLine($"Você irá receber aproximadamente R${extra} de extra.");
+            double DSR = extra * 26/4;
+            WriteLine($"Você irá receber aproximadamente R${extra} de extra e aproximadamente R${DSR}.");
         }
     }
 }
