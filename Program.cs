@@ -1,5 +1,5 @@
 ﻿using static System.Console; // Permite usar WriteLine diretamente
-using System; // Biblioteca padrão
+using System.Globalization;
 
 namespace Calculadora
 {
@@ -7,17 +7,19 @@ namespace Calculadora
     {
         static void Main(string[] args)
         {
+            CultureInfo cultura = CultureInfo.InvariantCulture;
+
             WriteLine("Seja bem vindo(a)!");
             WriteLine("Digite o valor da sua hora:");
-            double valorHora = double.Parse(ReadLine());
+            double valorHora = double.Parse(ReadLine(), cultura);
             WriteLine("Digite quantas horas extras foram feitas:");
-            double qtdHoras = double.Parse(ReadLine());
+            double qtdHoras = double.Parse(ReadLine(), cultura);
             WriteLine("Sua hora extra vale quantos %:");
-            double porcertagem = double.Parse(ReadLine());
-            double extra = valorHora * (1 + porcertagem / 100) * qtdHoras;
+            double porcentagem = double.Parse(ReadLine(), cultura);
+            double extra = valorHora * (1 + porcentagem / 100) * qtdHoras;
 
-            double DSR = extra * 26/4;
-            WriteLine($"Você irá receber aproximadamente R${extra} de extra e aproximadamente R${DSR}.");
+            double dsr = extra / 26 * 4;
+            WriteLine($"Você irá receber aproximadamente R${extra:f2} de extra e aproximadamente R${dsr:f2} de DSR.");
         }
     }
 }
